@@ -89,4 +89,4 @@ print(res)
 
 ## License
 
-This client is licensed under the MIT License. See the LICENSE file for more information.
+This client is licensed under the GNU v3. See the LICENSE file for more information.
