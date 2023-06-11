@@ -24,7 +24,7 @@ To perform an exact search, you can use the `search_exact_match` function. This 
 
 - `apikey`: Your ScamSearchAPI API key.
 - `search_term`: The term you want to search for.
-- `search_type`: The type of search you want to perform. This can be one of the following values: `bitcoin_address`, `scammer_username`, `scammer_email`, `scammer_phone`, `scam_description`.
+- `search_type`: The type of search you want to perform. This can be one of the following values: `all`, `bitcoin_address`, `scammer_username`, `scammer_email`, `scammer_phone`, `scam_description`.
 
 Here's an example:
 
