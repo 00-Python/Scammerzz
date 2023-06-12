@@ -2,8 +2,11 @@ import requests
 import json
 
 class ScamSearchAPI:
-    def __init__(self, api_key):
-        self.api_key = api_key
+    def __init__(self):
+        self.api_key = os.environ.get('SS_API_KEY')
+        if not self.api_key:
+            with open('api.txt', 'r') as f:
+                api_key = f.read().strip()
         self.base_url = "https://scamsearch.io/api/"
 
     def report_scammer(self, bitcoin_address, scam_type, scammer_username=None, scammer_email=None, scammer_phone=None, scam_description=None):
