@@ -3,8 +3,8 @@ import json
 import os
 
 # function to perform exact search on ScamSearchAPI
-def exact_search_scams(apikey, search_term, search_type):
-    res = ScamSearchAPI(apikey).search_exact_match(search_term, search_type)
+def exact_search_scams(search_term, search_type):
+    res = ScamSearchAPI().search_exact_match(search_term, search_type)
     res = json.dumps(res)
     res = json.loads(res)
 
@@ -32,17 +32,11 @@ def print_exact_search_scams(res):
 
 
 if __name__ == '__main__':
-    # get the API key from environment variable or file
-    api_key = os.environ.get('SS_API_KEY')
-    if not api_key:
-        with open('api.txt', 'r') as f:
-            api_key = f.read().strip()
-
     # get the search term and search type from user input
     search_term = input("Enter the search term: ")
     search_type = input("Enter the search type: ")
 
     # perform exact search and print the results
-    res = exact_search_scams(api_key, search_term, search_type)
+    res = exact_search_scams(search_term, search_type)
     if False == res: print("No Results, please refine your search parameter")
     print_exact_search_scams(res)
