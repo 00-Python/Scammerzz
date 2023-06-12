@@ -1,5 +1,6 @@
 import requests
 import json
+import os
 
 class ScamSearchAPI:
     def __init__(self):
